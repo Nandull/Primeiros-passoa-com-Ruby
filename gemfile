@@ -1,0 +1,8 @@
+source 'https://rubygems.org' #mencionar da onde irá baixar as gems
+
+gem 'os'
+gem 'rek' #essas são as gems que irão baixar, pode listar arias que baixa de uma vez. 
+
+#no terminal executar o comando bundler que fará a instalação de todas.
+
+#podemos encontrar gems também no github

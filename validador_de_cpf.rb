@@ -27,17 +27,12 @@ while true
     elsif option == 2
         def criar_cpf
             CPF.generate
-            puts "O novo CPF criado é #{CPF.generate}"
+            
 
         end
         puts "O novo CPF criado é #{CPF.generate}"
 
        
-
-
-
-
- 
     else option == 0
         puts 'Saindo....'
         break

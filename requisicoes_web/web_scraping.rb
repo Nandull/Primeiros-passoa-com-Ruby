@@ -1,14 +1,16 @@
-#com ele conseguimos chamar sites da rede, tecnica de extrair informações de sites HTML. usar a gem nokogiri
-
 require 'nokogiri'
 require 'net/http'
 
-https = Net::HTTP.new ('onbitcode.com', 443)
+# Corrigindo a criação da instância Net::HTTP
+https = Net::HTTP.new('www.onebitcode.com', 443)
 https.use_ssl = true
 
-response = https.get ("/")
-doc = nokogiri::html (response.body)
+# Corrigindo a chamada do método get
+response = https.get("/")
 
-last_post = doc.at ('h3 a')
-puts last_post.content
-puts last_post['href']
+# Corrigindo a criação do objeto Nokogiri::HTML
+doc = Nokogiri::HTML(response.body)
+
+# Corrigindo o método at
+h1 = doc.at('h1')
+puts h1
